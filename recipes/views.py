@@ -14,3 +14,9 @@ def sobre(request):
 def contato(request):
     # HTTP Response
     return HttpResponse('<h1>CONTATO - Django</h1>')
+
+def home(request):
+    return render(request, 'recipes/pages/home.html', context={'name': 'Gabriel Rodrigues'})
+
+def recipe(request, id):
+    return render(request, 'recipes/pages/recipe-view.html', context={})
